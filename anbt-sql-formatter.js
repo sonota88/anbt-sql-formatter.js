@@ -877,8 +877,7 @@ var anbtSqlFormatter;
     this.functionBracket = new Stack();
   }
   AnbtSqlFormatter.prototype = {
-    // TODO rename to "splitToStatements"
-    splitBySemicolon: function(tokens){
+    splitToStatements: function(tokens){
       var statements = [];
       var buf = [];
       for(var a=0,len=tokens.length; a<len; a++){
@@ -913,7 +912,7 @@ var anbtSqlFormatter;
       
       tokens = this.parser.parse(sqlStr);
 
-      var statements = this.splitBySemicolon(tokens);
+      var statements = this.splitToStatements(tokens);
 
       //tokens = this.formatList(tokens);
       var statementsFormatted = [];
