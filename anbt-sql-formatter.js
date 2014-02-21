@@ -815,9 +815,8 @@ var anbtSqlFormatter;
                     return x.string.replace(/\s+/, " ");
                   });
               
-              if( tempTokens.join("")
-                  .toUpperCase()
-                  .match( new RegExp( kw.join(" ") ) )
+              if( tempTokens.join("").toUpperCase()
+                  === kw.join(" ") 
                 )
               {
                 tokens[index].string = tempTokens.join("");
