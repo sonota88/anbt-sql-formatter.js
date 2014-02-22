@@ -515,7 +515,7 @@ var anbtSqlFormatter;
     this.tokenPos = null;
 
     // 2文字からなる記号。
-    this.twoCharacterSymbol = [ "<>", "<=", ">=", "||" ];
+    this.twoCharacterSymbol = [ "<>", "<=", ">=", "||", "!=" ];
   }
   AnbtSqlParser.prototype = {
     /**
@@ -574,6 +574,7 @@ var anbtSqlFormatter;
             || c === "<"
             || c === "="
             || c === ">"
+            || c === "!"
       );
     },
 
