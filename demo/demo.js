@@ -71,6 +71,8 @@ window.asf = (function(){
 
   function format(){
     var rule = new _asf.Rule();
+    rule.functionNames.push("DATE");
+    rule.kw_minus1_indent_nl_kw_plus1_indent.push("LIMIT");
     var formatter = new _asf.Formatter(rule);
 
     _id(doc, "output").value

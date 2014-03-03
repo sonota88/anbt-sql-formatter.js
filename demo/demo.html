@@ -96,7 +96,7 @@ table1 t1  ,  table2 t2
 and t1.b='foo'
 and d = (select max(e) from y )
 and e in (1,2)
- group by b;
+ group by b limit 10;
 
 -- statement 2
 INSERT
